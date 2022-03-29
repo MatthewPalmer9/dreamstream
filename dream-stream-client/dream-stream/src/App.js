@@ -1,11 +1,12 @@
+import React from 'react';
+import Video from './components/Video';
+
 function App() {
+
+
   return (
     <div className="App">
-      <video id="videoPlayer" controls muted="muted" autoPlay>
-        <source 
-          src="http://localhost:3000/video/big-buck" type="video/mp4"
-        />
-      </video>
+      <Video src="big-buck" />
     </div>
   );
 }
