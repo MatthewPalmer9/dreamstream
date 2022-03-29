@@ -1,12 +1,16 @@
 import React from 'react';
-import Video from './components/Video';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import VideoPage from './components/VideoPage.jsx';
+import './index.css';
 
 function App() {
-
-
   return (
     <div className="App">
-      <Video src="big-buck" />
+      <Router>
+        <Routes>
+          <Route exact path="films/big-buck" element={<VideoPage src="big-buck"/>} />
+        </Routes>
+      </Router>
     </div>
   );
 }
