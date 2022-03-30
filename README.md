@@ -30,11 +30,15 @@ DreamStream is a video streaming application.
 - HTML
 
 ## Dependencies 
-| Dependency | URL      | 
-|-----------|-----------|
-| nodemon   | [Link](https://www.jsdelivr.com/package/npm/nodemon) |
-| express   | [Link](https://www.jsdelivr.com/package/npm/express) |
-| dotenv    | [Link](https://www.jsdelivr.com/package/npm/dotenv) |
+| Dependency | URL       | 
+|------------|-----------|
+| express                              | [Link](https://www.jsdelivr.com/package/npm/express)  |
+| mongoose                             | [Link](https://www.jsdelivr.com/package/npm/mongoose) |
+| dotenv                               | [Link](https://www.jsdelivr.com/package/npm/dotenv)   |
+| prettier                             | [Link](https://www.jsdelivr.com/package/npm/prettier) |
+| eslint (+Plugins - See package.json) | [Link](https://www.jsdelivr.com/package/npm/eslint)   |
+| nodemon                              | [Link](https://www.jsdelivr.com/package/npm/nodemon)  |
+| morgan                               | [Link](https://www.jsdelivr.com/package/npm/morgan)   |
 
 ## Back-end Documentation
 TBA

@@ -1,4 +1,5 @@
 import React from 'react';
+import SignUpForm from '../../components/Forms/SignUp.jsx';
 import './Landing.css';
 
 export default function Landing() {
@@ -13,17 +14,7 @@ export default function Landing() {
                     </p>
                 </div>
                 <div className="right-side">
-                    <form className="sign-up-form"> 
-                        <header>Sign Up</header>
-                        <input placeholder="Email" />
-                        <label htmlFor="email">Email:</label>
-                        <input placeholder="Password" />
-                        <label htmlFor="password">Password:</label>
-                        <div className="form-submit-box">
-                            <button>Create Account</button>
-                            <a href="/">Already have an account? Sign in here!</a>
-                        </div>
-                    </form>
+                    <SignUpForm />
                 </div>
             </div>
         </div>
