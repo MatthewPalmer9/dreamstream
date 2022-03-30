@@ -1,4 +1,14 @@
+.video-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: auto;
+    background-color: #222;
+    padding-top: 6.5rem;
+}
+
 video {
-    width: 60rem;
+    width: 70%;
     height: auto;
 }

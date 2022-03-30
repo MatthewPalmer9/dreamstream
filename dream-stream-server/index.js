@@ -28,9 +28,10 @@ app.get("/video/big-buck", (req, res) => {
         "Accept-Ranges": "bytes",
         "Content-Length": contentLength,
         "Content-Type": "video/mp4",
+        "Custom": start
     }
 
-    res.writeHead(206, headers);
+    res.writeHead(206, headers); // just response headers
 
     const videoStream = fs.createReadStream(videoPath, { start, end });
 

@@ -1,5 +1,21 @@
+.video-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  height: auto;
+  background-color: #222;
+  padding-top: 6.5rem;
+}
+
 video {
-  width: 60rem;
+  width: 70%;
   height: auto;
 }
 /*# sourceMappingURL=video.css.map */

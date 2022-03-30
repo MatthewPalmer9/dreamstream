@@ -1,0 +1,19 @@
+:root {
+    --white: #f8f9fa;
+    --dim-white: #dee2e6;
+    --red: #c92a2a;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 120rem;
+    padding-top: 24rem;
+}
+
+.grid-2-cols {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.6rem;
+}

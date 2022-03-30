@@ -1,0 +1,67 @@
+@import url(c:\Users\6J1872897\VSCode Projects\dream-stream\dream-stream-client\dream-stream\src\global-styles\global.css);
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  height: 7.6rem;
+}
+
+.navbar .nav-brand {
+  color: var(--white);
+  font-size: 3.2rem;
+  padding-left: 3.2rem;
+  letter-spacing: -0.1rem;
+  font-weight: 700;
+}
+
+.navbar .nav-brand span {
+  color: var(--red);
+}
+
+.navbar .nav-brand:hover {
+  cursor: pointer;
+}
+
+.navbar .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.6rem;
+  list-style: none;
+  padding-right: 4.4rem;
+}
+
+.navbar .nav-list .list-item {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--white);
+  font-weight: 500;
+}
+
+.navbar .nav-list .list-item button {
+  background-color: rgba(201, 42, 42, 0.8);
+  border: none;
+  color: var(--white);
+  font-size: 1.6rem;
+  padding: 0.8rem 2.4rem;
+  border-radius: 0.2rem;
+}
+
+.navbar .nav-list .list-item button:hover {
+  cursor: pointer;
+  background-color: rgba(201, 42, 42, 0.7);
+}
+
+.navbar .nav-list .list-item:hover {
+  cursor: pointer;
+  color: var(--dim-white);
+}
+/*# sourceMappingURL=navbar.css.map */
