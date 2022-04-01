@@ -4,29 +4,56 @@
     margin: 0 auto;
 }
 
+.header, .subheader {
+    will-change: transform;
+    transform: translateY(50%);
+    color: transparent;
+}
+
+
 .header {
+    animation: fadeInTop 2s;
     font-size: 5.2rem;
-    color: var(--white);
     letter-spacing: -0.1rem;
     margin-top: 0;
     margin-bottom: 1.6rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    transition: ease-in-out 0.9s;
+    color: var(--white);
 }
 
 .subheader {
+    animation: fadeInBottom 2s;
     margin: 0;
-    color: var(--white);
     font-size: 2.4rem;
     line-height: 1.6;
     letter-spacing: -0.1rem;
+    transition: ease-in-out 1s;
+    color: var(--white);
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.sign-up-form, .header.fadeInUp, .subheader.fadeInUp {
+    transform: translateY(0%);
 }
 
 .sign-up-form {
+    animation: fadeInFromBack 3s;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: var(--white);
     background-color: rgba(201, 42, 42, 0.3);
-    padding: 2rem;
     border-radius: 0.5rem;
+    gap: 2rem;
+    padding: 1.5rem;
+
+    .input-field {
+        position: relative;
+    }
 
     header {
         display: flex;
@@ -41,19 +68,35 @@
     }
 
     label {
+        display: flex;
         font-size: 1.6rem;
-        transform: translateY(-4.2rem) translateX(3.4rem);
+        transform: translateY(-13.5rem) translateX(1rem);
         transform-origin: 0 0;
         color: var(--white);
         transition: all 0.3s;
         font-weight: 500;
         pointer-events: none;
+        height: 2rem;
+        position: absolute;
+
+        &:nth-of-type(1) {
+            top: 14.4rem;
+        }
+        &:nth-of-type(2) {
+            top: 21.4rem;
+        }
+        &:nth-of-type(3) {
+            top: 28.1rem;
+        }
+        &:nth-of-type(4) {
+            top: 34.9rem;
+        }
     }
 
     input {
         margin-bottom: 0.8rem;
-        width: 50rem;
-        height: 4.4rem;
+        width: 40rem;
+        height: 3.6rem;
         border-radius: 0.2rem;
         border-style: none none solid none;
         border-color: var(--white);
@@ -61,7 +104,8 @@
         outline: none;
         transition: all 0.5s;
         color: var(--white);
-        align-self: center;
+        // align-self: center;
+        position: relative;
 
         &:focus {
             border-color: rgba(201, 42, 42, 1);
@@ -74,7 +118,7 @@
 
     input:focus + label,
     input:not(:placeholder-shown) + label{
-        transform: translateY(-7.8rem) translateX(2.2rem);
+        transform: translateY(-16.5rem) translateX(0rem);
     }
 
     .form-submit-box {
@@ -86,7 +130,7 @@
 
         button {
             margin-top: 0.5rem;
-            width: 32rem;
+            width: 30rem;
             padding: 0.8rem 2.4rem;
             border: none;
             border-radius: 0.2rem;
@@ -105,6 +149,78 @@
             text-decoration: none;
             color: #a5d8ff;
             border-bottom: 0.1rem dotted #a5d8ff;
+        }
+    }
+}
+
+@keyframes fadeInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes fadeInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes fadeInFromBack {
+    0% {opacity: 0;};
+    100% {opacity: 1;};
+}
+
+@media(max-width: 63em) {
+    .header {
+        text-align: center;
+        font-size: 4.8rem;
+    }
+    .subheader {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .header, .subheader {
+        text-align: center;
+        margin: 0 4rem;
+    }
+
+    .grid-2-cols {
+        gap: 0;
+
+        .right-side {
+            display: grid;
+            grid-template-columns: 1fr;
+            max-width: 120rem;
+        }
+    }
+    
+    .sign-up-form {
+        margin: 0 auto;
+        width: 80%;
+
+        label {
+            transform: translateY(-13.5rem) translateX(1rem);
+        }
+
+        input {
+            width: 30rem;
+            align-self: center;
+        }
+
+        input:focus + label,
+        input:not(:placeholder-shown) + label{
+            transform: translateY(-16.5rem) translateX(0rem);
         }
     }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import VideoPage from './pages/VideoPage.jsx';
 import Landing from './pages/Landing/Landing.jsx';
-import './index.css';
+import './global-styles/global.css'
 import Navbar from './components/Navbar/Navbar.jsx';
 
 function App() {

@@ -15,12 +15,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-html {
-  background: linear-gradient(to left, rgb(20, 20, 20), rgb(33, 37, 41));
-  font-size: 62.5%;
-}
-
-.App {
-  
-}

@@ -6,7 +6,7 @@ Staging: N/A
 [Matthew Palmer](https://github.com/matthewpalmer9)
 
 ## About
-DreamStream is a video streaming application.
+DreamStream is a video streaming application. It is a passion project for fun and with the ultimate goal of upgrading my knowledge around video stream, user accounts, security and more.
 
 ## Objectives
 - To learn about video streaming.
@@ -14,19 +14,20 @@ DreamStream is a video streaming application.
 - Implement full tests
 
 ## Challenges encountered
-- TBA
+- #1 - The first challenge I encountered was with the initial signup form. The problem came to be when it was time to make my landing page responsive. I realized that I didn't structure the form well enough for this task, so I solved it by refactoring style properties until the intended behavior was achieved.
 
 ## Key Features
 - Video Streaming
 - Front-end (React)
-- Back-end (Express)
+- Back-end (Express/Mongo DB Cloud)
 
 ## Tech Stack
+- MongoDB 
 - React.js
-- Node.js
 - Express
+- Node.js
 - JavaScript
-- CSS
+- SCSS/CSS
 - HTML
 
 ## Dependencies 

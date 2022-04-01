@@ -1,8 +1,19 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import SignUpForm from '../../components/Forms/SignUp.jsx';
 import './Landing.css';
 
 export default function Landing() {
+
+    useEffect(() => {
+        const header = document.querySelector(".header");
+        const subheader = document.querySelector(".subheader");
+
+        setTimeout(() => {
+            header.classList.toggle("fadeInUp");
+            subheader.classList.toggle("fadeInUp");
+        }, 1000);
+    }, []);
+
     return (
         <div className="container">
             <div className="grid-2-cols">
