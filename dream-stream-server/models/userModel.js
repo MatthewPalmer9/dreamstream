@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 const validator = require('validator');
 
 const userSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: [true, 'Please provide your name.'],
+  },
   email: {
     type: String,
     required: [true, 'A user must have an email'],
@@ -11,7 +15,7 @@ const userSchema = new mongoose.Schema({
   },
   password: {
     type: String,
-    required: [true, 'A user must have a password'],
+    required: [true, 'Please provide a password'],
     minlength: 8,
     select: false,
   },
@@ -20,7 +24,8 @@ const userSchema = new mongoose.Schema({
     required: [true, 'Please confirm your password'],
     validate: {
       // This only works on CREATE and SAVE!!
-      validator: (el) => {
+      validator: function(el) {
+        console.log(el, this.password);
         return el === this.password;
       },
       message: 'Passwords are not the same!',

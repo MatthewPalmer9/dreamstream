@@ -7,7 +7,7 @@ export default function Video({src}) {
     return (
         <video id="videoPlayer" controls muted autoPlay>
             <source 
-                src={`${API_URL}/video/${src}`}
+                src={`${API_URL}/videos/${src}`}
                 type="video/mp4"
             />
         </video>

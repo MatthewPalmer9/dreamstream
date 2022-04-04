@@ -12,7 +12,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Landing />} />
-          <Route exact path="films/big-buck" element={<VideoPage src="big-buck"/>} />
+          <Route exact path="films/bigbuck" element={<VideoPage src="bigbuck"/>} />
         </Routes>
       </Router>
     </div>

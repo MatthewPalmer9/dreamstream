@@ -1,4 +1,6 @@
 const express = require('express');
+const userRouter = require('./routes/userRoutes');
+const videoRouter = require('./routes/videoRouter');
 const fs = require('fs');
 const app = express();
 
@@ -9,41 +11,16 @@ if (process.env.NODE_ENV === 'development') {
 
 app.use(express.json());
 app.use(express.static(__dirname));
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  next();
+});
 
 app.get('/', (req, res) => {
   res.send(200, 'Success!');
 });
 
-app.get('/video/big-buck', (req, res) => {
-  const range = req.headers.range;
-  if (!range) {
-    res.status(400).send('Requires Range header');
-  }
-
-  const videoPath = 'videos/bigbuck.mp4';
-  const videoSize = fs.statSync('videos/bigbuck.mp4').size;
-
-  const CHUNK_SIZE = 10 ** 6; // 1MB
-
-  // replace non-digit characters with ""
-  const start = Number(range.replace(/\D/g, ''));
-  const end = Math.min(start + CHUNK_SIZE, videoSize - 1); // videoSize - 1 so that we can't go past it
-
-  const contentLength = end - start + 1;
-
-  const headers = {
-    'Content-Range': `bytes ${start}-${end}/${videoSize}`,
-    'Accept-Ranges': 'bytes',
-    'Content-Length': contentLength,
-    'Content-Type': 'video/mp4',
-    Custom: start,
-  };
-
-  res.writeHead(206, headers); // just response headers
-
-  const videoStream = fs.createReadStream(videoPath, { start, end });
-
-  videoStream.pipe(res);
-});
+app.use('/api/v1/videos', videoRouter);
+app.use('/api/v1/users', userRouter);
 
 module.exports = app;

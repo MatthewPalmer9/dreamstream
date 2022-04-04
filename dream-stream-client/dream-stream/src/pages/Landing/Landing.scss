@@ -180,6 +180,14 @@
     100% {opacity: 1;};
 }
 
+@media (max-width: 83em) {
+    .sign-up-form {
+        input {
+            width: 40rem;
+        }
+    }
+}
+
 @media(max-width: 63em) {
     .header {
         text-align: center;
