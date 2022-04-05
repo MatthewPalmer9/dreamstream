@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
+const bcrypt = require('bcryptjs');
 
 const userSchema = new mongoose.Schema({
   name: {
@@ -36,6 +37,16 @@ const userSchema = new mongoose.Schema({
     default: Date.now(),
     select: false,
   },
+});
+
+// Password Encryption:
+// Between getting data and saving it, run this only if password has been modified (user create/save): 
+userSchema.pre('save', async function(next) {
+  if(!this.isModified('password')) return next();
+
+  // hash password with a cost of 12 (no higher. CPU intensive)
+  this.password = await bcrypt.hash(this.password, 12);
+  this.passwordConfirm = undefined;
 });
 
 const User = mongoose.model('User', userSchema);
