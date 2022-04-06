@@ -16,6 +16,8 @@ DreamStream is a video streaming application. It is a passion project for fun an
 ## Challenges encountered
 - #1 - The first challenge I encountered was with the initial signup form. The problem came to be when it was time to make my landing page responsive. I realized that I didn't structure the form well enough for this task, so I solved it by refactoring style properties until the intended behavior was achieved.
 
+- #2 - I have worked with JWT tokens and password encryption before in Ruby on Rails and Spring Boot, but the approach is slightly different in JavaScript-based APIs. Learning how best to compare passwords with a schema that hides a password from being selected in a query was interesting. This issue was solved with research and review.
+
 ## Key Features
 - Video Streaming
 - Front-end (React)
