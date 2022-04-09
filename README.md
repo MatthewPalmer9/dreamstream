@@ -37,13 +37,21 @@ DreamStream is a video streaming application. It is a passion project for fun an
 ## Dependencies 
 | Dependency | URL       | 
 |------------|-----------|
-| express                              | [Link](https://www.jsdelivr.com/package/npm/express)  |
-| mongoose                             | [Link](https://www.jsdelivr.com/package/npm/mongoose) |
-| dotenv                               | [Link](https://www.jsdelivr.com/package/npm/dotenv)   |
-| prettier                             | [Link](https://www.jsdelivr.com/package/npm/prettier) |
-| eslint (+Plugins - See package.json) | [Link](https://www.jsdelivr.com/package/npm/eslint)   |
-| nodemon                              | [Link](https://www.jsdelivr.com/package/npm/nodemon)  |
-| morgan                               | [Link](https://www.jsdelivr.com/package/npm/morgan)   |
+| express                              | [Link](https://www.jsdelivr.com/package/npm/express)          |
+| mongoose                             | [Link](https://www.jsdelivr.com/package/npm/mongoose)         |
+| dotenv                               | [Link](https://www.jsdelivr.com/package/npm/dotenv)           |
+| prettier                             | [Link](https://www.jsdelivr.com/package/npm/prettier)         |
+| eslint (+Plugins - See package.json) | [Link](https://www.jsdelivr.com/package/npm/eslint)           |
+| nodemon                              | [Link](https://www.jsdelivr.com/package/npm/nodemon)          |
+| morgan                               | [Link](https://www.jsdelivr.com/package/npm/morgan)           |
+| react-cookie                         | [Link](https://www.jsdelivr.com/package/npm/react-cookie)     |
+| validator                            | [Link](https://www.jsdelivr.com/package/npm/validator)        |
+| jsonwebtoken                         | [Link](https://www.jsdelivr.com/package/npm/jsonwebtoken)     |
+| bcryptjs                             | [Link](https://www.jsdelivr.com/package/npm/bcryptjs)         |
+| cors                                 | [Link](https://www.jsdelivr.com/package/npm/cors)             |
+| react-router-dom                     | [Link](https://www.jsdelivr.com/package/npm/react-router-dom) |
+
+
 
 ## Back-end Documentation
 TBA
