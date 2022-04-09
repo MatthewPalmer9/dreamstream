@@ -4,10 +4,11 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import API from "./services/api";
-import VideoPage from "./pages/VideoPage.jsx";
-import Landing from "./pages/Landing/Landing.jsx";
-import Navbar from "./components/Navbar/Navbar.jsx";
-import LogIn from "./components/Forms/LogIn.jsx";
+import VideoPage from "./pages/VideoPage.js";
+import Landing from "./pages/Landing/Landing.js";
+import Navbar from "./components/Navbar/Navbar.js";
+import LogIn from "./components/Forms/LogIn.js";
+import Films from "./pages/Films/Films";
 
 function App() {
     const [cookies, setCookies, removeCookies] = useCookies([]);
@@ -71,6 +72,11 @@ function App() {
                                 loggedIn={loggedIn}
                             />
                         }
+                    />
+                    <Route 
+                      exact
+                      path="/films"
+                      element={<Films />}
                     />
                     <Route
                         exact
