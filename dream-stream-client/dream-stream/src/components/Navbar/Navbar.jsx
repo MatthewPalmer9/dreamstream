@@ -1,17 +1,10 @@
-import React, { useEffect } from 'react';
-import { useCookies } from 'react-cookie';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './navbar.css';
 
 export default function Navbar(props) {
     const { loggedIn, user, handleLogout } = props;
     const history = useNavigate();
-    const [cookies, setCookie, removeCookie ] = useCookies([]);
-    console.log("COOKIES", cookies)
-
-    useEffect(() => {
-
-    }, [loggedIn, cookies.id]);
 
     const redirectToLogin = e => {
         e.preventDefault();

@@ -42,7 +42,6 @@ exports.signup = catchAsync(async (req, res, next) => {
 /** LOG IN */
 exports.login = catchAsync(async (req, res, next) => {
   const { email, password } = req.body.loginData;
-  console.log("LOGIN CREDS", req.body);
 
   // Check if email and password parameters were provided
   if (!email || !password) {
