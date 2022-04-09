@@ -32,9 +32,13 @@
 
         .list-item {
             font-size: 1.6rem;
-            text-transform: uppercase;
+            // text-transform: uppercase;
             color: var(--white);
-            font-weight: 500;
+            font-weight: 700;
+
+            .user-greeting {
+                padding-right: 1rem;
+            }
 
             button {
                 background-color: rgba(201, 42, 42, 0.8);

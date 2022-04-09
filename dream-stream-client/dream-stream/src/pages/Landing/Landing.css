@@ -66,6 +66,19 @@
   padding: 1.5rem;
 }
 
+.sign-up-form .error-field {
+  background-color: rgba(201, 42, 42, 0.7);
+  padding: 0.5rem 0;
+  width: 100%;
+  text-align: center;
+  opacity: 1;
+  margin-top: -3rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  pointer-events: none;
+}
+
 .sign-up-form .input-field {
   position: relative;
 }

@@ -41,7 +41,8 @@ exports.signup = catchAsync(async (req, res, next) => {
 
 /** LOG IN */
 exports.login = catchAsync(async (req, res, next) => {
-  const { email, password } = req.body;
+  const { email, password } = req.body.loginData;
+  console.log("LOGIN CREDS", req.body);
 
   // Check if email and password parameters were provided
   if (!email || !password) {
@@ -53,14 +54,15 @@ exports.login = catchAsync(async (req, res, next) => {
 
   // If user doesn't exist or the passwords do not match, return error
   if (!user || !(await user.correctPassword(password, user.password))) {
-    return next(new AppError('Incorrect email or password', 401));
+    return next(new AppError('Incorrect email or password', 401, res));
   }
 
   // If all checks out, sign token and send to client
   const token = signToken(user._id);
   res.status(200).json({
-    status: 'success',
+    status: 200,
     token,
+    user
   });
 });
 
@@ -76,7 +78,7 @@ exports.protect = catchAsync(async (req, res, next) => {
 
   // If no token is provided, respond with a 401 (unauthorized) error
   if (!token) {
-    return next(new AppError('You are not logged in!', 401));
+    return next(new AppError('You are not logged in!', 401, res));
   }
 
   // Verification for token
@@ -87,14 +89,14 @@ exports.protect = catchAsync(async (req, res, next) => {
   const currentUser = await User.findById(decoded.id);
   if (!currentUser) {
     return next(
-      new AppError('The user belonging to the token no longer exists!', 401)
+      new AppError('The user belonging to the token no longer exists!', 401, res)
     );
   }
 
   // Check is user changed their password after JWT token was issued
   if (currentUser.changedPasswordAfter(decoded.iat)) {
     return next(
-      new AppError('User recently changed password! Please log in again.', 401)
+      new AppError('User recently changed password! Please log in again.', 401, res)
     );
   }
 

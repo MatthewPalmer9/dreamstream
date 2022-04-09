@@ -40,9 +40,12 @@
 
 .navbar .nav-list .list-item {
   font-size: 1.6rem;
-  text-transform: uppercase;
   color: var(--white);
-  font-weight: 500;
+  font-weight: 700;
+}
+
+.navbar .nav-list .list-item .user-greeting {
+  padding-right: 1rem;
 }
 
 .navbar .nav-list .list-item button {

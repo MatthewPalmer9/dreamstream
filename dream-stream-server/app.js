@@ -1,7 +1,7 @@
 const express = require('express');
 const userRouter = require('./routes/userRoutes');
 const videoRouter = require('./routes/videoRouter');
-const fs = require('fs');
+const cors = require('cors');
 const app = express();
 
 // for console color coding of HTTP requests
@@ -10,11 +10,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 app.use(express.json());
-app.use(express.static(__dirname));
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  next();
-});
+app.use(cors());
 
 app.get('/', (req, res) => {
   res.send(200, 'Success!');
