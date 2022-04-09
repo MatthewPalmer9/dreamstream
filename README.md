@@ -55,12 +55,12 @@ To get the site running locally:
 - Run `npm install` to ensure the dependencies are installed
 - Run `npm start` to run the application in a production environment
 - Copy the `localhost` URL. You will need it in the client.
-- In your terminal, type `cd ../dream-stream-client/dream-stream-client/dream-stream
+- In your terminal, type `cd ../dream-stream-client/dream-stream-client/dream-stream`
 - `touch .env`
 - inside of your .env file, type `REACT_APP_API_URL=<YOUR_SERVER_URL_HERE>`
 - Start application => `npm start`
 
-**Note: You may find trouble using this project if you don't have the back-end running locally on your machine.**
+**Note: You may find trouble using this project if you don't have the back-end running locally on your machine. The database attached in the cloud is not configured to allow your connection locally, so you will need to create your own MongoDB database.**
 
 ## Scripts 
 - `npm run` - Runs the environment on your system
