@@ -19,7 +19,7 @@ export default function Navbar(props) {
     return (
         <nav className="navbar">
             <div className="nav-brand">
-                Dream<span>Stream</span>
+                <a href="/">Dream<span>Stream</span></a>
             </div>
             <ul className="nav-list">
                 <li className="list-item">

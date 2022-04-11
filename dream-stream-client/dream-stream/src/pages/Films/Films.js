@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 import "./films.css";
 import bigbuck from "./img/bigbuck.PNG";
+import sintel from "./img/sintel.PNG";
 
 export default function Films({ cookies }) {
     const history = useNavigate();
@@ -13,7 +14,7 @@ export default function Films({ cookies }) {
 
     useEffect(() => {
         if (!cookies.id) {
-            toast.error('You need to log in first!');
+            toast.error("You need to log in first!");
             history("/login");
         }
     }, [cookies.id, history]);
@@ -40,7 +41,12 @@ export default function Films({ cookies }) {
                     />
                 </div>
                 <div className="film">
-                    <img src={bigbuck} alt="big buck movie poster" />
+                    <img 
+                        id="sintel"
+                        onClick={handleFilmRedirect} 
+                        src={sintel} 
+                        alt="sintel movie poster" 
+                    />
                 </div>
                 <div className="film">
                     <img src={bigbuck} alt="big buck movie poster" />

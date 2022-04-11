@@ -26,6 +26,7 @@
   font-weight: 700;
   font-size: 1.5rem;
   max-width: 140rem;
+  height: 7.4rem;
 }
 
 .films-container .films {
@@ -33,7 +34,7 @@
   display: grid;
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
-  gap: 4.4rem;
+  gap: 3.2rem;
   max-width: 140rem;
   margin: 0 auto;
   padding: 0 2rem;

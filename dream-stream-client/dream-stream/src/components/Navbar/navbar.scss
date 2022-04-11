@@ -22,6 +22,11 @@
         &:hover {
             cursor: pointer;
         }
+
+        a {
+            text-decoration: none;
+            color: aliceblue;
+        }
     }
 
     .nav-list {

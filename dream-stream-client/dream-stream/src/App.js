@@ -87,6 +87,11 @@ function App() {
                         path="films/bigbuck"
                         element={<VideoPage cookies={cookies} src="bigbuck" />}
                     />
+                    <Route
+                        exact
+                        path="films/sintel"
+                        element={<VideoPage cookies={cookies} src="sintel" />}
+                    />
                 </Routes>
             </Router>
         </div>

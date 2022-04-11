@@ -29,6 +29,11 @@
   cursor: pointer;
 }
 
+.navbar .nav-brand a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
 .navbar .nav-list {
   display: -webkit-box;
   display: -ms-flexbox;
