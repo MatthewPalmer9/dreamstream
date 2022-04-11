@@ -13,7 +13,7 @@ export default function Navbar(props) {
 
     const logout = async (e) => {
         e.preventDefault();
-        await handleLogout().then(history("/"));
+        await handleLogout().then(history("/logout"));
     };
 
     return (

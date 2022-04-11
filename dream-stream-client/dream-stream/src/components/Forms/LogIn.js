@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 
@@ -9,6 +9,12 @@ export default function LogIn(props) {
     const { handleLogin, setLoggedIn, loggedIn } = props;
     const history = useNavigate();
 
+    useEffect(() => {
+        // REDIRECT IF NO ERRORS && LOGGED IN
+        if (!error && loggedIn) {
+            history("/films");
+        }
+    }, [error, history, loggedIn])
     // STATE OF FORM
     const handleChange = (e) => {
         setLoginData({
@@ -20,15 +26,11 @@ export default function LogIn(props) {
     // LOGIN
     const login = async (e) => {
         setError(false);
-        await handleLogin(e, loginData).catch((err) => {
+        await handleLogin(e, loginData)
+        .catch((err) => {
             setError(true);
         });
     };
-
-    // REDIRECT IF NO ERRORS && LOGGED IN
-    if (!error && loggedIn) {
-        history("/");
-    }
 
     return (
         <form

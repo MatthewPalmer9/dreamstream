@@ -20,6 +20,8 @@ DreamStream is a video streaming application. It is a passion project for fun an
 
 - #3 - On the front-end, I needed to establish a login form with validations and needed to check for buggy behavior. Unfortunately, I spend a good amount of time working through this and didn't give myself a break for about 4 hours. This lead to burnout. I learned that even with tasks I've accomplished before, sometimes taking a step away is required to return with a clear mind. This was also a great way to learn more about cookies instead of using unsecure methods like localStorage. I made it through this challenge by slowing down, taking a break, and thinking more carefully about the way logic flows.
 
+- #4 - Some routes needed to be gated if a user was not signed in. I had a couple issues with this. To begin with, I needed a high quality way to notify a user when they have tried to access a route restricted to signed-in users only. If this wasn't a challenge by itself, I needed to establish a way for user information to update before a redirect (e.g. User signs in => then gets directed to the /films page). Otherwise, a user signs in, gets redirected to a gated route, and then gets redirected *again* to /login because the cookies didn't update fast enough. This was mostly my fault because I'm silly and was not calling the history hook inside of useEffect(). Once I changed this, necessary information had time to become available before other conditionals were run. As for notifying users, I used a nice dependency called `react-toastify`. I established the `<ToastContainer />` at the App root outside of routes so that it is available for use no matter where a user is. `toast` can be used in one component and show up in another! You can see how this works when you're not signed in and attempt to access a protected route.
+
 ## Key Features
 - Video Streaming
 - Front-end (React)
@@ -50,6 +52,8 @@ DreamStream is a video streaming application. It is a passion project for fun an
 | bcryptjs                             | [Link](https://www.jsdelivr.com/package/npm/bcryptjs)         |
 | cors                                 | [Link](https://www.jsdelivr.com/package/npm/cors)             |
 | react-router-dom                     | [Link](https://www.jsdelivr.com/package/npm/react-router-dom) |
+| react-toastify                       | [Link](https://www.jsdelivr.com/package/npm/react-toastify)   |
+
 
 
 

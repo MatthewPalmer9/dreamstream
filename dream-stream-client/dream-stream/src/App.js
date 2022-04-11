@@ -3,12 +3,15 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import API from "./services/api";
 import VideoPage from "./pages/VideoPage.js";
 import Landing from "./pages/Landing/Landing.js";
 import Navbar from "./components/Navbar/Navbar.js";
 import LogIn from "./components/Forms/LogIn.js";
 import Films from "./pages/Films/Films";
+import Logout from "./pages/Logout/Logout";
 
 function App() {
     const [cookies, setCookies, removeCookies] = useCookies([]);
@@ -47,9 +50,13 @@ function App() {
         }
         await logout();
     };
-
     return (
         <div className="App">
+            <>
+                <ToastContainer 
+                    draggable={false}
+                />
+            </>
             <Router>
                 <Navbar
                     loggedIn={loggedIn}
@@ -60,7 +67,7 @@ function App() {
                     <Route
                         exact
                         path="/"
-                        element={<Landing setCookies={setCookies} />}
+                        element={<Landing cookies={cookies} />}
                     />
                     <Route
                         exact
@@ -73,15 +80,12 @@ function App() {
                             />
                         }
                     />
-                    <Route 
-                      exact
-                      path="/films"
-                      element={<Films />}
-                    />
+                    <Route exact path="/logout" element={<Logout />} />
+                    <Route exact path="/films" element={<Films cookies={cookies} />} />
                     <Route
                         exact
                         path="films/bigbuck"
-                        element={<VideoPage src="bigbuck" />}
+                        element={<VideoPage cookies={cookies} src="bigbuck" />}
                     />
                 </Routes>
             </Router>

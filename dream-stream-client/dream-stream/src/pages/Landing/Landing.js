@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Landing.css";
 
-export default function Landing() {
+export default function Landing({ cookies }) {
     const [signUpData, setSignUpData] = useState({});
 
     const handleChange = (e) => {
@@ -11,7 +12,12 @@ export default function Landing() {
         });
     };
 
+    const history = useNavigate();
     useEffect(() => {
+        if (cookies.id) {
+            history("/films");
+        }
+
         const header = document.querySelector(".header");
         const subheader = document.querySelector(".subheader");
 

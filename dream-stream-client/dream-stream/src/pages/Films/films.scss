@@ -1,5 +1,48 @@
 .films-container {
     max-width: 140rem;
-    border: 0.1rem solid red;
     margin: 0 auto;
+
+    h2 {
+        color: aliceblue;
+        font-size: 3.2rem;
+    }
+
+    .left-bar, .right-bar {
+        height: 0.1rem;
+        background-color: aliceblue;
+    }
+
+    .category-type {
+        display: grid;
+        gap: 1rem;
+        padding: 2rem;
+        grid-template-columns: 8fr 2fr 90fr;
+        align-items: center;
+        font-weight: 700;
+        font-size: 1.5rem;
+        max-width: 140rem;
+    }
+    
+    .films {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 4.4rem;
+        max-width: 140rem;
+        margin: 0 auto;
+        padding: 0 2rem;
+
+        .film {
+            transition: 100ms;
+            
+            &:hover {
+                cursor: pointer;
+                transform: translateY(-0.5rem);
+            }
+        }
+
+        .film img {
+            width: 100%;
+            height: auto;
+        }
+    }
 }
