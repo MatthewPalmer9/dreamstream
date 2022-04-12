@@ -12,6 +12,7 @@ import Navbar from "./components/Navbar/Navbar.js";
 import LogIn from "./components/Forms/LogIn.js";
 import Films from "./pages/Films/Films";
 import Logout from "./pages/Logout/Logout";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
     const [cookies, setCookies, removeCookies] = useCookies([]);
@@ -102,6 +103,12 @@ function App() {
                         path="films/tearsofsteel"
                         element={<VideoPage cookies={cookies} src="tearsofsteel" />}
                     />
+                    <Route
+                        exact
+                        path="films/nightmarebeforechristmas"
+                        element={<VideoPage cookies={cookies} src="nightmarebeforechristmas" />}
+                    />
+                    <Route path="*" element={<NotFound />} />
                 </Routes>
             </Router>
         </div>

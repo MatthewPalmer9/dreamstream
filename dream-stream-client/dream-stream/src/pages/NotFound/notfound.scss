@@ -1,0 +1,71 @@
+.nf-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    justify-content: center;
+    margin: 0 3.2rem;
+    max-width: 100%;
+    padding: 4.4rem 3.2rem;
+    background-color: rgba(150, 0, 0, 0.3);
+    margin-top: 16rem;
+    border: 0.2rem solid rgba(150, 0, 0, 0.6);
+    border-radius: 1rem;
+
+    h1, p {
+        text-align: center;
+        color: aliceblue;
+    }
+    
+    h1 {
+        font-size: 4.4rem;
+        margin: 0;
+        margin-bottom: 3.2rem;
+    }
+
+    p {
+        font-size: 2.4rem;
+        margin: 0;
+        line-height: 1.6;
+        padding: 0 16rem;
+
+        button {
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+            border: none;
+            border-bottom: 0.2rem dotted lightblue;
+            font-size: 2.4rem;
+            font-weight: 500;
+            color: lightblue;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+        }
+    }
+}
+
+@media (max-width: 64em) {
+
+    .container {
+        margin: 0 auto;
+    }
+
+    .nf-container {
+        h1 {
+            font-size: 3.2rem;
+        }
+
+        p {
+            font-size: 2.4rem;
+            padding: 0 2.4rem;
+
+            button {
+                font-size: 2.4rem;
+            }
+        }
+    }
+        
+}

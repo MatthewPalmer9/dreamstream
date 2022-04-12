@@ -7,6 +7,7 @@ import bigbuck from "./img/bigbuck.PNG";
 import sintel from "./img/sintel.PNG";
 import elephantsdream from "./img/elephantsdream.PNG";
 import tearsofsteel from "./img/tearsofsteel.PNG";
+import nightmarebeforechristmas from './img/nightmarebeforechristmas.PNG';
 
 export default function Films() {
     const history = useNavigate();
@@ -69,7 +70,11 @@ export default function Films() {
                     />
                 </div>
                 <div className="film">
-                    <img src={bigbuck} alt="big buck movie poster" />
+                    <img 
+                        id="nightmarebeforechristmas"
+                        onClick={handleFilmRedirect}
+                        src={nightmarebeforechristmas} 
+                        alt="the nightmare before christmas movie poster" />
                 </div>
             </div>
         </div>
