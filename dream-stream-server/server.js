@@ -9,9 +9,13 @@ const DB = process.env.DATABASE.replace(
   process.env.DATABASE_PASSWORD
 );
 
-mongoose
+async function startServer() {
+  await mongoose
   .connect(DB)
-  .then(() => console.log('DB connection successful!'));
+  .then(() => console.log('DB connection successful!'))
+};
+startServer();
+
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
