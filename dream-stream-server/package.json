@@ -2,7 +2,7 @@
   "name": "dream-stream-server",
   "version": "1.0.0",
   "description": "DreamStream server",
-  "main": "index.js",
+  "main": "server.js",
   "engines" : {
     "node": "14.x"
   },
