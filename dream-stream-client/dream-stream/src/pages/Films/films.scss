@@ -1,6 +1,9 @@
 .films-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 140rem;
-    margin: 0 auto;
+    margin: 0 1rem;
 
     h2 {
         color: aliceblue;
@@ -26,16 +29,16 @@
     
     .films {
         display: grid;
-        align-items: center;
         justify-content: center;
         grid-template-columns: repeat(5, 1fr);
         gap: 3.2rem;
-        max-width: 140rem;
+        max-width: 100rem;
         margin: 0 auto;
-        padding: 0 2rem;
+        
 
         .film {
             transition: 100ms;
+            justify-self: center;
             
             &:hover {
                 cursor: pointer;
@@ -44,8 +47,53 @@
         }
 
         .film img {
+            align-self: center;
+            justify-self: center;
             width: 24rem;
             height: 36rem;
+        }
+    }
+}
+
+@media (max-width: 79em) {
+    .films-container {
+        .films {
+            gap: 2.4rem;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+@media (max-width: 71em) {
+    .films-container {
+        .films {
+            grid-template-columns: repeat(3, 1fr);
+
+            .film img {
+                width: 32rem;
+                height: 44rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 54em) {
+    .films-container {
+        width: 100%;
+        
+        .films {
+            justify-self: center;
+            justify-content: center;
+            gap: 1rem;
+            grid-template-columns: repeat(2, 1fr);
+            height: 100%;
+            width: 50rem;
+            margin: 0 1rem;
+
+            .film img {
+                width: 26rem;
+                height: 36rem;
+            }
         }
     }
 }
