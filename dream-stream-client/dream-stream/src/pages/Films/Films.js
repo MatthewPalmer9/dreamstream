@@ -1,12 +1,16 @@
 import React, { useEffect } from "react";
+import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "./films.css";
 import bigbuck from "./img/bigbuck.PNG";
 import sintel from "./img/sintel.PNG";
+import elephantsdream from "./img/elephantsdream.PNG";
+import tearsofsteel from "./img/tearsofsteel.PNG";
 
-export default function Films({ cookies }) {
+export default function Films() {
     const history = useNavigate();
+    const [cookies] = useCookies();
 
     const handleFilmRedirect = (e) => {
         history(`/films/${e.target.id}`);
@@ -41,18 +45,28 @@ export default function Films({ cookies }) {
                     />
                 </div>
                 <div className="film">
-                    <img 
+                    <img
                         id="sintel"
-                        onClick={handleFilmRedirect} 
-                        src={sintel} 
-                        alt="sintel movie poster" 
+                        onClick={handleFilmRedirect}
+                        src={sintel}
+                        alt="sintel movie poster"
                     />
                 </div>
                 <div className="film">
-                    <img src={bigbuck} alt="big buck movie poster" />
+                    <img
+                        id="elephantsdream"
+                        onClick={handleFilmRedirect}
+                        src={elephantsdream}
+                        alt="elephants dream movie poster"
+                    />
                 </div>
                 <div className="film">
-                    <img src={bigbuck} alt="big buck movie poster" />
+                    <img
+                        id="tearsofsteel"
+                        onClick={handleFilmRedirect}
+                        src={tearsofsteel}
+                        alt="tears of steel movie poster"
+                    />
                 </div>
                 <div className="film">
                     <img src={bigbuck} alt="big buck movie poster" />

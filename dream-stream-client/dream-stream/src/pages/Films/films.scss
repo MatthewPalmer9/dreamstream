@@ -26,6 +26,8 @@
     
     .films {
         display: grid;
+        align-items: center;
+        justify-content: center;
         grid-template-columns: repeat(5, 1fr);
         gap: 3.2rem;
         max-width: 140rem;
@@ -42,8 +44,8 @@
         }
 
         .film img {
-            width: 100%;
-            height: auto;
+            width: 24rem;
+            height: 36rem;
         }
     }
 }

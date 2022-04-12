@@ -81,7 +81,12 @@ function App() {
                         }
                     />
                     <Route exact path="/logout" element={<Logout />} />
-                    <Route exact path="/films" element={<Films cookies={cookies} />} />
+                    <Route exact path="/films" element={<Films  />} />
+                    <Route
+                        exact
+                        path="films/elephantsdream"
+                        element={<VideoPage cookies={cookies} src="elephantsdream" />}
+                    />
                     <Route
                         exact
                         path="films/bigbuck"
@@ -91,6 +96,11 @@ function App() {
                         exact
                         path="films/sintel"
                         element={<VideoPage cookies={cookies} src="sintel" />}
+                    />
+                    <Route
+                        exact
+                        path="films/tearsofsteel"
+                        element={<VideoPage cookies={cookies} src="tearsofsteel" />}
                     />
                 </Routes>
             </Router>
